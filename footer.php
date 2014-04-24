@@ -46,15 +46,15 @@
 			<?php } ?>
 
 		</footer> <!-- /.site-footer.row -->
-
+</div> <!-- /.footercontainer -->
 		<?php if ( of_get_option( 'footer_content', awesome_get_credits() ) ) {
+			echo '<div class="row smallfoot">';
 			echo '<div class="row smallprint">';
 			echo apply_filters( 'meta_content', wp_kses_post( of_get_option( 'footer_content', awesome_get_credits() ) ) );
 			echo '</div> <!-- /.smallprint -->';
 		} ?>
 
-	</div> <!-- /.footercontainer -->
-
+	
 </div> <!-- /.#wrapper.hfeed.site -->
 
 <?php wp_footer(); ?>

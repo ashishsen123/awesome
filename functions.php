@@ -14,6 +14,8 @@
 if ( ! isset( $content_width ) )
 	$content_width = 790; /* Default the embedded content width to 790px */
 
+// customizer addition
+require get_template_directory() . './inc/customizer.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -254,15 +256,7 @@ function awesome_widgets_init() {
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>'
 		) );
-	register_sidebar( array(
-			'name' => esc_html__( 'front Page main banner Widget Area', 'awesome' ),
-			'id' => 'main-banner',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'awesome' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+	
 	register_sidebar( array(
 			'name' => esc_html__( 'First Footer Widget Area', 'awesome' ),
 			'id' => 'sidebar-footer1',
@@ -948,3 +942,22 @@ add_filter( 'meta_content', 'convert_smilies' );
 add_filter( 'meta_content', 'convert_chars'  );
 add_filter( 'meta_content', 'wpautop' );
 add_filter( 'meta_content', 'shortcode_unautop'  );
+
+/**
+ * Adds custom classes to the array of body classes.
+ */
+function awesome_body_classes( $classes ) {
+	// Adds a class of group-blog to blogs with more than 1 published author
+	
+	if(get_theme_mod('sidebar_position')){
+		 $slug = strtolower(get_theme_mod( 'sidebar_position' ));
+        $classes[] = 'awesome-'.$slug;
+	}
+	
+	if(get_theme_mod('awesome_color_scheme')){
+		 $slug = strtolower(get_theme_mod( 'awesome_color_scheme' ));
+        $classes[] = 'awesome-'.$slug;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'awesome_body_classes' );

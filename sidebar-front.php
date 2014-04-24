@@ -34,12 +34,13 @@
 				<?php }
 			} ?>
 		</div> <!-- /#secondary.row -->
+		<?php } ?>
 		<div class="main-banner">
-	<div class="main-widget-banner">
-	<p>Tatva is a rock solid mobile responsive WordPress theme loaded with all essential features of a business website.</p>
-	<img src="http://1.gravatar.com/avatar/596dddfd1c9dcb2f15e7dab46ea838f9?s=100&d=http%…2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D10"/>
-	<p class=name>punnet sahlot</p>
-	</div>
-	</div>
+			<div class="main-widget-banner">
+			<p>Tatva is a rock solid mobile responsive WordPress theme loaded with all essential features of a business website.</p>
+			<img src="http://1.gravatar.com/avatar/596dddfd1c9dcb2f15e7dab46ea838f9?s=100&d=http%…2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D10"/>
+			<p class=name>punnet sahlot</p>
+			</div>
+		</div>
 
-	<?php } ?>
+	
