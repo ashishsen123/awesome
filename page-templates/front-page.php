@@ -49,18 +49,18 @@ get_header(); ?>
 		</div> <!-- /.banner.row -->
 	</div> <!-- /#bannercontainer -->
 	
-	<?php   // Display featured posts on front page
-            get_template_part('content', 'frontposts');
-            ?>
+	
 
 	<div id="maincontentcontainer">
 	
 	<?php get_sidebar( 'front' ); ?>
 	
 	<?php
-
 			 // Display featured products on front page
             get_template_part('content', 'frontproducts');
+			
+			 // Display featured posts on front page
+            get_template_part('content', 'frontposts');
 
            
             ?>

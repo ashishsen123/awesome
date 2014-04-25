@@ -55,8 +55,12 @@
 						else {
 							echo get_bloginfo( 'name' );
 						} ?>
+						
 					</a>
 				</h1>
+				<?php 
+					echo get_bloginfo('description');
+					?>
 			</div> <!-- /.col.grid_5_of_12 -->
 
 			
@@ -64,6 +68,7 @@
 
 	</div> <!-- /#headercontainer -->
 	<div class="nav-container">
+	<div class="nav-head row">
 	<div class="col grid_12_of_12">
 				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -73,6 +78,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 				
 				</nav> <!-- /.site-navigation.main-navigation -->
-			</div> <!-- /.col.grid_7_of_12 -->
+			</div> <!-- /.col.grid_12_of_12 -->
+			</div>
 			</div>	
 	
